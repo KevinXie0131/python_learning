@@ -52,3 +52,13 @@ print('float is', float('15.61'))
 print(9 / 6)
 print(9 // 6)
 print(9 % 6)
+
+age = 18
+age += 1
+print(age)
+
+print(5 == '5')
+print(ord('a'))
+print(ord('A'))
+print(ord(' '))
+print(chr(65))
