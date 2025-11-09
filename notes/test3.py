@@ -111,3 +111,13 @@ print(type(list(dict1.items())), list(dict1.items()))
 for i in dict1.items():
     print(type(i), i, i[0], i[1], end=' ')
 print()
+
+d1 = {'张三': 72, '李四': 60, '王五': 85}
+for key in d1:
+    print(f'{key}的成绩是{d1[key]}')
+for key in d1.keys():
+    print(f'{key}的成绩是{d1[key]}')
+
+print('李四' in d1.keys())
+print(60 in d1.values())
+print(61 not in d1.values())
