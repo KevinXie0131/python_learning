@@ -64,3 +64,50 @@ print()
 for item in frozenset(s1):
     print(item, end=' ')
 print()
+
+dict1 = {'zhangsan': 11, 20254144: True, 'wangwu': 22.3, 'zhaoliu': None, 'jack': {1,2}, 'tom': [12.3, 32.4], 'rose': ('abc',), 'mary': 'A1B2C3', 'mary': 'A1b2C3'}
+print(type(dict1), dict1)
+d1 = {}
+d2 = dict()
+print(type(d1), d1)
+print(type(d2), d2)
+
+print(dict1['zhangsan'])
+dict1['zhangsan'] = [11, 22]
+print(dict1['zhangsan'])
+
+del dict1['zhangsan']
+print(dict1)
+
+print(dict1.pop(20254144))
+print(dict1)
+print(dict1.pop(20254145, 'not found'))
+
+dict1.clear()
+print(dict1)
+
+dict1['a1'] = 1.23
+print(dict1)
+dict1.update({'b2': True, 'c3': '123'})
+print(dict1)
+
+print(dict1.get('d4', 'Not Found'))
+
+print(type(dict1.keys()), dict1.keys())
+for key in dict1.keys():
+    print(key, dict1[key], end='->')
+print()
+
+print(type(list(dict1.keys())), list(dict1.keys()))
+
+print(type(dict1.values()), dict1.values())
+for v in dict1.values():
+    print(v, end=' ')
+print()
+
+print(type(list(dict1.values())), list(dict1.values()))
+
+print(type(list(dict1.items())), list(dict1.items()))
+for i in dict1.items():
+    print(type(i), i, i[0], i[1], end=' ')
+print()
