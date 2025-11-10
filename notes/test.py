@@ -91,3 +91,6 @@ print(bin(25))
 print(hex(463))
 print(int('11001', 2))
 print(int('1cf', 16))
+
+print(id(b1))
+print(id(b2))
