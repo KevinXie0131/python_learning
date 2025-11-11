@@ -3,6 +3,7 @@
 """doc
 doc1
 doc2"""
+import random
 
 a = 1 # this is a
 b = 'bbb'
@@ -94,3 +95,10 @@ print(int('1cf', 16))
 
 print(id(b1))
 print(id(b2))
+
+print(random.randint(1, 10))
+
+for number in range(1, 10, 2):
+    print(number, end=' ')
+print()
+print(number)
