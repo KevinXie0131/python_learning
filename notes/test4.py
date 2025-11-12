@@ -1,3 +1,4 @@
+
 class Student:
     def add(self, x, y):
         print(self)
@@ -30,4 +31,80 @@ print(test_func(computer))
 
 print(test_func(lambda x, y: x * y))
 
+f = open('notes.txt', 'r', encoding='UTF-8')
+print(f, type(f))
+content = f.read()
+print(content)
+f.close()
 
+f = open('notes.txt', 'r', encoding='UTF-8')
+print(f.readlines())
+f.close()
+f.close()
+
+f = open('notes.txt', 'r', encoding='UTF-8')
+print(f.readline())
+f.close()
+
+f = open('notes.txt', 'r', encoding='UTF-8')
+for line in f:
+    print(line, end='')
+f.close()
+print()
+
+with open('notes.txt', 'r') as f:
+    print( f.readlines())
+
+try:
+    a = 1 / 0
+except ZeroDivisionError as e0:
+    print(e0)
+
+try:
+    print(b)
+except NameError as e1:
+    print(e1)
+
+try:
+ #   print(b)
+    1 / 0
+except (ZeroDivisionError, NameError) as e2:
+    print(e2)
+
+try:
+#    1 / 0
+    f = open('notes1.txt', 'r', encoding='UTF-8')
+    f.close()
+except Exception as ex:
+    print(ex)
+
+try:
+    1 / 0
+except:
+    print('has exception')
+else:
+    print('has no exception')
+finally:
+    print('finally')
+
+import time
+time.sleep(1)
+
+import time as tt
+tt.sleep(1)
+
+from time import sleep
+sleep(1)
+
+from time import *
+sleep(1)
+
+from time import sleep as sl
+sl(1)
+
+import my_module1
+print(my_module1.test1(3, 4))
+
+# from my_module1 import *
+# print(test1(3, 4))
+# test2(3, 1) # not found
