@@ -108,3 +108,24 @@ print(my_module1.test1(3, 4))
 # from my_module1 import *
 # print(test1(3, 4))
 # test2(3, 1) # not found
+
+# from my_module1 import test2
+# print(test2(3, 4))
+
+
+# import mypackage.my_package_module1
+# mypackage.my_package_module1.print_info()
+
+# from mypackage import my_package_module1
+# my_package_module1.print_info()
+
+# from mypackage import *
+# my_package_module1.print_info()
+# my_package_module2.print_info2() # not found
+
+# from mypackage.my_package_module1 import print_info
+# print_info()
+
+from mypackage.my_package_module1 import *
+print_info()
+print_info1()
