@@ -67,3 +67,43 @@ print(stu1 <= stu2)
 
 stu.set_score()
 print(stu.get_score())
+
+
+class Young_Student(Student):
+    age = None
+
+    def setAge(self, age):
+        self.age = age
+
+    def getAge(self):
+        return self.age
+
+youngStu = Young_Student( 'wang')
+youngStu.setAge(12);
+print(youngStu.name)
+print(youngStu.getAge())
+youngStu.say2('welcome')
+
+
+class Old_Student(Student):
+    pass
+
+oldStu = Old_Student( 'zhang')
+oldStu.say2('hi')
+
+
+class Parent:
+    name = 'itcast'
+
+    def get_name(self):
+        return self.name + " hello"
+
+class Child(Parent):
+    age = 11
+
+    def get_name(self):
+        # return super().get_name() + " welcome " + super().name
+        return Parent.get_name(self) + " welcome " + Parent.name
+
+child = Child()
+print(child.get_name())
