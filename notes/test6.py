@@ -17,3 +17,14 @@ def my_fun():
     return 10
 
 result = my_fun() # type: int
+
+def func(data: str):
+    return len(data)
+
+print(func('a'))
+
+def func1(data: list[int]) -> int:
+    data.append(1)
+    return len(data)
+
+print(func1([1, 2]))
