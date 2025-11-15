@@ -2,6 +2,7 @@
 class Player(object): # 父类
     numbers = 0   # 类属性
     levels = ['青铜', '白银', '黄金', '钻石', '王者']
+
     def __init__(self,name,age,city,level):  # 初始化函数（构造函数）
         self.name = name  # 实例属性
         self.age = age
@@ -47,9 +48,7 @@ class VIP(Player): # 子类
 
     # 实例方法重写
     def show(self):  # 实例的方法
-        print('我是荣耀王者的第%d个玩家，我的名字是%s，我来自 %s，我的段位是%s，我的余额是%d' % (Player.numbers,self.name,self.city,self.level,self.coin))
-
-
+        print('我是荣耀王者的第%d个VIP玩家，我的名字是%s，我来自 %s，我的段位是%s，我的余额是%d' % (Player.numbers,self.name,self.city,self.level,self.coin))
 
 
 mia = VIP('mia',24,'哈尔滨','黄金',100)
