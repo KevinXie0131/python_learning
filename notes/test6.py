@@ -113,3 +113,5 @@ try:
 except Exception as ex:
     print(ex)
 #    raise
+
+print('seperator', 'test' , sep=' + ')
