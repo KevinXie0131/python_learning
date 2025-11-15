@@ -1,6 +1,7 @@
 class Player(object):
     numbers = 0   # 类属性
     levels = ['青铜', '白银', '黄金', '钻石', '王者']
+
     def __init__(self,name,age,city,level):  # 初始化函数（构造函数）
         self.name = name  # 实例属性
         self.age = age
@@ -26,26 +27,24 @@ class Player(object):
         return self.weapon.show_weapon()
 
 
-
-
-class weapon(object):
+class Weapon(object):
     numbers = 0
     max_damage = 10000
     levels = ['青铜','白银','黄金','钻石','王者']
+
     def __init__(self,name,damage,level):
         self.name = name
         self.damage = damage
         self.level = level
-        weapon.numbers += 1
-        if damage>weapon.max_damage:
+        Weapon.numbers += 1
+        if damage>Weapon.max_damage:
             raise Exception('最大的伤害值是10000，请重试！')
-        if level not in weapon.levels:
+        if level not in Weapon.levels:
             raise Exception('段位设置错误！')
 
     def show_weapon(self):
         for k,v in self.__dict__.items():
             print(k,v)
-
 
 
 mia = Player('mia',24,'大连','青铜')
@@ -60,6 +59,6 @@ mia.level_up()
 mia.show()
 mia.level_up()
 mia.show()
-gun = weapon('magic_gun',1000,'青铜')
+gun = Weapon('magic_gun',1000,'青铜')
 mia.get_weapon(gun)
 mia.show_weapon()

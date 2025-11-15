@@ -1,6 +1,7 @@
 class Player(object):
     numbers = 0   # 类属性
     levels = ['青铜', '白银', '黄金', '钻石', '王者']
+
     def __init__(self,name,age,city,level):  # 初始化函数（构造函数）
         self.name = name  # 实例属性
         self.age = age
@@ -27,16 +28,19 @@ class Player(object):
 
     @classmethod
     def get_players(cls):  # 类方法
+        print(f"这是一个类方法，属于{cls.__name__}类")
+        print(cls, type(cls))
         print('荣耀王者的用户数量已经达到了%d人'%cls.numbers)
 
 mia = Player('mia',24,'湖北','青铜')
 mia.show()
 Player.get_players()
+tom = Player('tom',33,'湖北','青铜')
+tom.show()
+Player.get_players()
 
 
-
-
-class weapon(object):
+class Weapon(object):
     # 类属性
     numbers = 0
     max_damage = 10000
@@ -48,32 +52,32 @@ class weapon(object):
         self.name = name
         self.damage = damage
         self.level = level
-        weapon.numbers += 1
-        if damage>weapon.max_damage:
+        Weapon.numbers += 1
+        if damage>Weapon.max_damage:
             raise Exception('最大的伤害值是10000，请重试！')
-        if level not in weapon.levels:
+        if level not in Weapon.levels:
             raise Exception('段位设置错误！')
-        weapon.all_weapons.append(self)
+        Weapon.all_weapons.append(self)
 
     @classmethod
-    def get_max_damage(cls):
+    def get_max_damage(cls, msg):
+        print(f"这是一个类方法，属于{cls.__name__}类")
+        print(msg)
         max_damage = 0
         for w in cls.all_weapons:
             if w.damage>max_damage:
                 max_damage = w.damage
         return max_damage
 
-
-
-
     def show_weapon(self):
         for k,v in self.__dict__.items():
             print(k,v)
 
-gun = weapon('magic',345,'青铜')
-a = weapon('a',34,'白银')
-b = weapon('b',123,'白银')
-print(weapon.get_max_damage())
+
+gun = Weapon('magic',345,'青铜')
+a = Weapon('a',34,'白银')
+b = Weapon('b',1231,'白银')
+print(Weapon.get_max_damage('hoho'))
 
 '''
 类属性

@@ -1,4 +1,4 @@
-class Student:
+class Student(object):
     name = None
 
     def __init__(self):
