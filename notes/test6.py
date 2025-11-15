@@ -12,6 +12,7 @@ stu1: Student = Student()
 print('stu is stu1: ', stu is stu1)
 print('stu is Student: ', isinstance(stu, Student))
 print('stu is Student: ', type(stu) == Student)
+print('bool issubclass of int: ', issubclass(bool, int))
 
 my_list1: list[int] = [1, 2, 3]
 my_list2 = [1, 2, 3] # type: list[int]
@@ -89,3 +90,26 @@ print(type(positive_infinity))
 
 print(max(1, 2))
 print(min(1, 2))
+
+print(' '.join('like'))
+
+x = bytes("hello", encoding="utf-8")
+print(x, type(x))
+print("The first element is 'h'", x[0] == ord("h"))
+
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print(f'What is your {q}?  It is {a}.')
+
+for i in reversed(range(1, 10, 2)):
+    print(i, end=' ')
+print()
+
+print(dir())
+
+try:
+    raise Exception('Exception: x 不能大于 5')
+except Exception as ex:
+    print(ex)
+#    raise

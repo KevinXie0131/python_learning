@@ -4,6 +4,19 @@ buckets = [[] for _ in range(10)]
 print(len(buckets))
 print(buckets)
 
+set1 = {x.upper() for x in 'acef' if x not in 'abc'}
+print(set1, type(set1))
+
+dict0 = {_: _**2 for _ in (2, 4, 6)}
+print(dict0, type(dict0))
+
+dict1 = {x: x**2 for x in (2, 4, 6, 8)}
+print(dict1, type(dict1))
+
+tuple1 = tuple(x for x in range(1, 10) if x % 2 == 0)
+print(tuple1, type(tuple1))
+
+
 def return_mulitp():
     return 1, 2.2, True, None, 'abc', [11, 22, 33]
 
@@ -21,6 +34,10 @@ def computer(x, y):
 print(test_func(computer))
 
 print(test_func(lambda x, y: x * y))
+
+my_sum = lambda arg1, arg2: arg1 + arg2
+print ("相加后的值为 : ", my_sum( 10, 20 ), " - ", type(my_sum))
+
 
 f = open('notes.txt', 'r', encoding='UTF-8')
 print(f, type(f))
