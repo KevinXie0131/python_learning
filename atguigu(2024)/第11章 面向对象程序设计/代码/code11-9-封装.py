@@ -44,6 +44,7 @@
 class Player(object): # 父类
     numbers = 0   # 类属性
     levels = ['青铜', '白银', '黄金', '钻石', '王者']
+
     def __init__(self,name,age,city,level):  # 初始化函数（构造函数）
         self._name = name  # 实例属性
         self._age = age
@@ -63,7 +64,6 @@ class Player(object): # 父类
         if len(city)>10 or len(city)<2:
             raise Exception('城市名称有误，请检查！')
         self._city = city
-
 
     @property
     def age(self):
@@ -88,9 +88,9 @@ class Player(object): # 父类
         else:
             self._name = name
 
-
     def show(self):  # 实例的方法
         print('我是荣耀王者的第%d个玩家，我的名字是%s，我来自 %s，我的段位是%s' % (Player.numbers,self.name,self.city,self.level))
+        print(self.__dict__)
 
     def level_up(self):
         index1 = Player.levels.index(self.level)
@@ -114,11 +114,16 @@ class Player(object): # 父类
         else:
             return False
 
+
 mia = Player('mia',26,'山东','王者')
+mia.show()
+
 mia.name = 'tom'
 print(mia.name)
+
 mia.age = 22
 print(mia.age)
+
 mia.city = '苏州'
 print(mia.city)
 print(mia.__dict__)
