@@ -14,3 +14,6 @@ https://askubuntu.com/questions/315015/how-can-i-remove-python-2-7-after-install
 
 Python download:
 https://www.python.org/ftp/python/3.13.9/
+
+venv 虚拟环境
+https://blog.csdn.net/PolarisRisingWar/article/details/139121596
