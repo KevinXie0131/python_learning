@@ -4,6 +4,6 @@ https://docs.python.org/3/py-modindex.html
 
 pip install numpy
 
-ubantu:
+ubantu in WSL:
     nvidia-smi
     cd /mnt
