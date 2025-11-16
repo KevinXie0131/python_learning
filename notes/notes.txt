@@ -7,3 +7,10 @@ pip install numpy
 ubantu in WSL:
     nvidia-smi
     cd /mnt
+
+How to install Python 3 in CentOS7:
+https://www.inmotionhosting.com/support/server/linux/install-python-3-9-centos-7/
+https://askubuntu.com/questions/315015/how-can-i-remove-python-2-7-after-installing-python-3-3
+
+Python download:
+https://www.python.org/ftp/python/3.13.9/
