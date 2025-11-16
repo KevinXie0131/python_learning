@@ -4,3 +4,6 @@ https://docs.python.org/3/py-modindex.html
 
 pip install numpy
 
+ubantu:
+    nvidia-smi
+    cd /mnt
