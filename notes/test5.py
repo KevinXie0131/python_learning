@@ -45,15 +45,13 @@ stu = Student('')
 stu.name = 'jack'
 sum = stu.add(1, 2)
 print(sum)
-
 print(stu.name)
 stu.say()
 stu.say2('hello')
-
+print('Student.name: ', Student.name)
 
 stu1 = Student('tom')
 print(stu1.name)
-
 print(stu1)
 print(str(stu1))
 
@@ -78,7 +76,7 @@ class Young_Student(Student):
     def getAge(self):
         return self.age
 
-youngStu = Young_Student( 'wang')
+youngStu = Young_Student('wang')
 youngStu.setAge(12);
 print(youngStu.name)
 print(youngStu.getAge())
@@ -101,9 +99,23 @@ class Parent:
 class Child(Parent):
     age = 11
 
+    def __init__(self):
+        print('create Child', self.age)
+
+    def __init__(self, age):
+        print('create Child', self.age)
+        self.age = age
+
     def get_name(self):
         # return super().get_name() + " welcome " + super().name
         return Parent.get_name(self) + " welcome " + Parent.name
 
-child = Child()
+child = Child(1)
 print(child.get_name())
+print(child.age)
+
+print(Child.age)
+Child.age = 22
+child1 = Child(2)
+print(child1.age)
+print(Child.age)
