@@ -9,7 +9,7 @@ print(adult)
 
 if age >= 18 and age < 40:
     print('young')
-elif 40 <= age  < 60:
+elif 40 <= age < 60:
     print('middle')
 else:
     print('old')
@@ -53,29 +53,35 @@ print(num1)
 
 def greet(name, gender, age, height):
     print(f'我叫{name}，性别{gender}，年龄是{age}，身高是{height}cm')
-greet(gender='male', age=11,name='zhangsan',height=155)
+
+greet(gender='male', age=11, name='zhangsan', height=155)
 greet('zhangsan', 'male', height=155, age=11)
 
 def greet1(name, /, gender, *, age, height):
     print(f'我叫{name}，性别{gender}，年龄是{age}，身高是{height}cm')
+
 greet1('zhangsan', 'male', height=155, age=11)
 
 def greet2(name, gender, age, height, msg='你好', welcome='welcome'):
     print(f'我叫{name}，性别{gender}，年龄是{age}，身高是{height}cm')
     print(f'我想说：{msg} {welcome}')
+
 greet2('zhangsan', 'male', 11, 155, 'hello', 'home')
 
 def test1(*args):
     print(type(args), args, args[1])
+
 test1(1, True,'test1',2.3)
 
 def test2(**kwargs):
     print(type(kwargs), kwargs)
+
 test2(name='张三', gender='男', age=18, height=172)
 
 def test3(name, age, *data, **config):
     print(type(data), data, data[1])
     print(type(config), config)
+
 test3('lisi', 12, 'swimming', 'hiking', height=155, weight=89)
 
 print(type(None), None, bool(None))
@@ -85,5 +91,6 @@ def factorial(num):
         return 1
     else:
         return num * factorial(num - 1)
+
 print(factorial(5))
 
