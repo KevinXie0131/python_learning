@@ -4,6 +4,9 @@ https://docs.python.org/3/py-modindex.html
 
 pip install numpy
 
+pip install -r requirements.txt
+pip freeze > requirements.txt
+
 ubantu in WSL:
     nvidia-smi
     cd /mnt
