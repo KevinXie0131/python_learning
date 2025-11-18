@@ -11,7 +11,10 @@ pip install -U langchain
 pip install -U langchain-google-genai
 pip install python-dotenv
 
-https://dev.to/timmydee/lets-build-a-free-chatbot-with-streamlit-and-gemini-ai-step-by-step-for-beginners-n14
+ChatGoogleGenerativeAI:
+-- https://docs.langchain.com/oss/python/integrations/chat/google_generative_ai
+Let's build a Free Chatbot with Streamlit and Gemini AI (Step-by-Step for Beginners):
+-- https://dev.to/timmydee/lets-build-a-free-chatbot-with-streamlit-and-gemini-ai-step-by-step-for-beginners-n14
 
 ubantu in WSL:
     nvidia-smi
