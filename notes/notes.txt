@@ -7,6 +7,9 @@ pip install numpy
 pip install -r requirements.txt
 pip freeze > requirements.txt
 
+ pip install -U langchain
+pip install -U langchain-google-genai
+
 ubantu in WSL:
     nvidia-smi
     cd /mnt
