@@ -116,3 +116,7 @@ except Exception as ex:
 
 print('seperator', 'test' , sep=' + ')
 
+# 条件表达式（三元运算符）
+score = 80
+result = "Pass" if score >= 60 else "Fail"
+print(result)
