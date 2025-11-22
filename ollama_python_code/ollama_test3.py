@@ -3,8 +3,10 @@ import ollama
 
 st.set_page_config(page_title="Ollama Streamlit Chatbot")
 
-st.title("Local LLM Chatbot with Ollama")
-
+st.title("Local LLM Chatbot with Ollama !!!")
+st.divider()
+st.write("Please ask me question:")
+st.divider()
 # Initialize chat history in Streamlit's session state
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -15,7 +17,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # User input
-if prompt := st.chat_input("Ask me anything......"):
+if prompt := st.chat_input("Ask me anything...-----"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
