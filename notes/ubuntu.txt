@@ -1,0 +1,10 @@
+sudo -i
+
+Python3.11 install on Ubuntu 24.04
+https://askubuntu.com/questions/1512005/python3-11-install-on-ubuntu-24-04
+
+How to Install Docker on Ubuntu 24.04: Step-by-Step Guide
+https://www.cherryservers.com/blog/install-docker-ubuntu
+
+WSL not located in Windows Apps
+https://learn.microsoft.com/en-us/answers/questions/3852765/wsl-not-located-in-windows-apps
